@@ -25,6 +25,10 @@ public class CashContext {
                 cs = new CashRebate("0.8");
                 break;
 
+            case "打5折":
+                cs = new CashRebateHalf("0.5");
+                break;
+
             default:
                 break;
         }

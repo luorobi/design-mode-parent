@@ -11,8 +11,9 @@ public class Client {
         int number = 300; //商品数量
         int price = 10; //商品单价
         Normal(number, price); //正常收费
-        Rebate(number, price); //打折收费
+        Rebate(number, price); //打8折收费
         Return(number, price); //满减收费
+        RebateHalf(number, price); //打5折收费
     }
     public static void Normal(int number, int price) {
         CashContext ccNormal = new CashContext("正常收费");
@@ -29,6 +30,12 @@ public class Client {
     public static void Return(int number, int price) {
         CashContext ccReturn = new CashContext("满1000减100");
         double result = ccReturn.getResult(number*price);
+        System.out.println("满减收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
+    }
+
+    public static void RebateHalf(int number, int price) {
+        CashContext ccRebate = new CashContext("打5折");
+        double result = ccRebate.getResult(number*price);
         System.out.println("打折收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
     }
 
