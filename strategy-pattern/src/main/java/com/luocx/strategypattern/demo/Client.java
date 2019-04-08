@@ -24,19 +24,19 @@ public class Client {
     public static void Rebate(int number, int price) {
         CashContext ccRebate = new CashContext("打8折");
         double result = ccRebate.getResult(number*price);
-        System.out.println("打折收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
+        System.out.println("打8折收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
     }
 
     public static void Return(int number, int price) {
         CashContext ccReturn = new CashContext("满1000减100");
         double result = ccReturn.getResult(number*price);
-        System.out.println("满减收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
+        System.out.println("满1000减100收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
     }
 
     public static void RebateHalf(int number, int price) {
         CashContext ccRebate = new CashContext("打5折");
         double result = ccRebate.getResult(number*price);
-        System.out.println("打折收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
+        System.out.println("打5折收费:商品单价为：" + price + "元，商品数量为：" + number + "件，应付款：" + result + "元。");
     }
 
 }
